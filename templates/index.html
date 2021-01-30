@@ -1,0 +1,181 @@
+ <style>
+
+ * {
+
+box-sizing: border-box;
+
+}
+
+*:focus {
+
+outline: none;
+
+}
+
+body {
+
+font-family: Arial;
+
+background-color: #E55423;
+
+padding: 50px;
+
+}
+
+.login {
+
+margin: 20px auto;
+
+width: 300px;
+
+}
+
+.login-screen {
+
+background-color: #FFF;
+
+padding: 20px;
+
+border-radius: 5px
+
+}
+
+.app-title {
+
+text-align: center;
+
+color: #777;
+
+}
+
+.login-form {
+
+text-align: center;
+
+}
+
+.control-group {
+
+margin-bottom: 10px;
+
+}
+
+input {
+
+text-align: center;
+
+background-color: #ECF0F1;
+
+border: 2px solid transparent;
+
+border-radius: 3px;
+
+font-size: 20px;
+
+font-weight: 200;
+
+padding: 10px 0;
+
+width: 250px;
+
+transition: border .5s;
+
+}
+
+input:focus {
+
+border: 2px solid #3498DB;
+
+box-shadow: none;
+
+}
+
+.btn {
+
+border: 2px solid transparent;
+
+background: #0000FF;
+
+color: #ffffff;
+
+font-size: 20px;
+
+line-height: 25px;
+
+padding: 10px 0;
+
+text-decoration: none;
+
+text-shadow: none;
+
+border-radius: 3px;
+
+box-shadow: none;
+
+transition: 0.25s;
+
+display: block;
+
+width: 250px;
+
+margin: 0 auto;
+
+}
+
+.btn:hover {
+
+background-color: #0000FF;
+
+}
+
+.login-link {
+
+font-size: 20px;
+
+color: #444;
+
+display: block;
+
+margin-top: 12px;
+
+}  
+
+ </style>
+
+ <title>2FACTOR</title>
+
+{% block body %}
+
+<form action="/otp" method="POST">
+
+<div class="login">
+
+  <div class="login-screen">
+
+    <div class="app-title">
+
+      <h1>2FACTOR</h1>
+
+    </div>
+
+  <div class="login-form">
+
+    <div class="control-group">
+
+        <input type="text" class="login-field" value="" placeholder="otp" name="otp">
+
+        <label class="login-field-icon fui-user" for="login-name"></label>
+
+    </div>
+
+     <input type="submit" value="Verify" class="btn btn-primary btn-large btn-block">
+
+   </div>
+
+  </div>
+
+ </div>
+
+</form>
+
+{% endblock %}
