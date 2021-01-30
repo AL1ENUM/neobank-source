@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NEOBANK</title>  
+</head>
+
+<body>
+  <div class="welcome">
+    <center>
+      <h1>
+        <font size="13" color="black">
+           Welcome
+        </font>
+      </h1>
+    </center>
+  </div>
+
+  <center>
+    <p>Your account name is: {{data[0]}}</p>
+    <p>Your account balance is: {{data[1]}}</p>
+    <form action="/withdraw" method = "POST">
+     <p>Enter the amount you want to withdraw:</p>
+     <p><input type="text" name="withdraw"/></p>
+     <p><input type="submit" value="submit"/></p>
+    </form>
+  </center>
+
+  <center>
+    <a href="/logout">Logout</a>
+  </center>
+
+  <div class="breaker">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+
+  <div class="footer">
+    <footer style="position: fixed; left: 2; right: 2; width: 95%; bottom: 0;">
+      <center>
+        neobank.vln 2020 @ All rights reserved
+      </center>
+    </footer>
+  </div>
+</body>
+
+</html>
